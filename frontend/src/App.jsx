@@ -20,6 +20,7 @@ function App() {
     } catch (error) {
       console.error('Error:', error);
     }
+    console.log(prediction);
   };
 
   return (
@@ -36,7 +37,7 @@ function App() {
         <div>
           <p>Selected file: {selectedFile.name}</p>
           <button onClick={handleSubmit}>Submit</button>
-          {prediction && <p>Prediction: {prediction.result}</p>}
+          {prediction && <p>Prediction: {prediction.prediction}</p>}
         </div>
       )}
     </div>
